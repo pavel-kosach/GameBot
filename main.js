@@ -6,13 +6,11 @@ const isNumber = function (num) {
 
 function game() {
   let aiNumber = 10;
-  let userNumber = +prompt("Угадай число от 1 до 100");
-  console.log(userNumber);
+  let userNumber = prompt("Угадай число от 1 до 100");
 
-  if (userNumber == null) {
-    alert("null");
-  }
-  if (!isNumber(userNumber)) {
+  if (userNumber == undefined) {
+    alert("игра окончена");
+  } else if (!isNumber(userNumber)) {
     alert("Введите число!!!");
     console.log(userNumber);
     game();
